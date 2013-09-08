@@ -101,8 +101,11 @@ function createApplicationAt(path) {
   // manifest.json
   var manifest = {
     static_prefix: '.',
+    img_prefix: ".",
+    timeStampName:"_",
     require_js_modules: ['main'],
     require_css_modules: ['main'],
+    require_html_modules: ['index'],
     local: {
       static_prefix: ".",
       img_prefix: ".",
