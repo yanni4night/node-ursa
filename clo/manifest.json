@@ -1,0 +1,17 @@
+{       
+        /*全局配置区*/
+        "always_add_timestamp": 0,
+        "require_js_modules": ["main"],
+        "require_css_modules": ["main", "page"],
+        "require_html_modules": ["index"],
+
+        /*本地文本替换关键字*/
+        "static_prefix": ".",
+        "img_prefix": "../..",
+        
+        /*发布文本替换关键字*/
+        "online": {
+            "static_prefix": ".",
+            "img_prefix": "../..",
+        }
+}

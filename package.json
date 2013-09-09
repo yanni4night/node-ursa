@@ -1,6 +1,6 @@
 {
   "name": "node-ursa",
-  "version": "0.0.1",
+  "version": "0.0.1 beta",
   "description": "Ursa system for javascript portable",
   "main": "index.js",
   "bin": {
@@ -16,7 +16,7 @@
   "author": "yanni4night@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "commander": "*",
+    "commander": "1.2.0",
     "mkdirp": "0.3.5",
     "swig":"*",
     "mime":"*",

@@ -5,22 +5,22 @@
  */
 
 var exec = require('child_process').exec,
-  program = require('commander'),
-  mkdirp = require('mkdirp'),
+  program = require('commander'),//v1.2.0
   pkg = require('../package.json'),
+  execSync = require('exec-sync'),
   version = pkg.version,
   os = require('os'),
   fs = require('fs'),
-  build=require('../lib/build'),
-  ursa = require('../lib/ursa');
-require('../lib/utils');
+  build,
+  sysPath=require('path'),
+  ursa = require('../lib/ursa'),
+  utils=require('../lib/utils');
 
 // CLI
-
 program
   .version(version)
   .usage('[options] ')
-  .option('-i,--init', 'Initialize the environment')
+  .option('-i,--init [path]', 'Initialize the environment')
   .option('-b,--build [item]', 'Build target')
   .option('-c,--compress', 'Compress js&css')
   .option('-h,--html', 'Generate html')
@@ -28,42 +28,57 @@ program
   .option('--help', 'Show help')
   .parse(process.argv);
 
-// Path
-
-var path = program.args.shift() || '.';
+//process.exit(0);
 
 if (program.init) {
-  //Shoule initialize
-  createApplication(path);
+
+  var path=".";
+  if('boolean'!==typeof program.init){
+    path=program.init;
+  }
+
+  //Create at target path if exists
+  if (fs.existsSync(path))
+    createApplication(path);
+  else
+    abort(path+" does not exist");
+
 } else if (program.start) {
+
   var app = ursa.getInstance();
   var port = +program.start;
-  app.listen((port > 0 && port < 65535) ? port : 8899);
+  app.listen((port > 1024 && port < 65535) ? port : 8899);
+
 } else if (program.build) {
-  //Should build an item
-  //@todo
-  if('boolean'===typeof program.build)
+
+  if('boolean'===typeof program.build||!program.build||program.build.constructor==Boolean)
     program.build=null;
+  //按需加载，避免在Initialize时对build产生影响
+  build=require('../lib/build');
   return build(program.build,!!program.compress,!!program.html);
+
 } else if (program.help) {
   //Show help
 } else {
-  console.error("Unknown parameters!".error);
+  abort("Unknown parameters!");
 }
 
-// Generate application
-
+/**
+ * [createApplication description]
+ * @param  {type} path [description]
+ * @return {type}      [description]
+ */
 function createApplication(path) {
   emptyDirectory(path, function(empty) {
     if (empty) {
       createApplicationAt(path);
     } else {
-      program.confirm('Directory is not empty, continue? ', function(ok) {
+      program.confirm('Directory is not empty, continue?', function(ok) {
         if (ok) {
           process.stdin.destroy();
           createApplicationAt(path);
         } else {
-          abort('aborting');
+          abort('Initializing gave up');
         }
       });
     }
@@ -77,49 +92,19 @@ function createApplication(path) {
  */
 
 function createApplicationAt(path) {
-  console.log();
   process.on('exit', function() {
     console.log();
-    console.log('   install dependencies:');
-    console.log('     $ cd %s && npm install', path);
+    console.log('   install dependencies:'.verbose);
+    console.log('     npm install'.verbose);
     console.log();
-    console.log('   run the app:');
-    console.log('     $ node app');
+    console.log('   run the app:'.verbose);
+    console.log('     $ node-ursa --start [port]'.verbose);
     console.log();
   });
 
-  mkdir(path, function() {
-    mkdir(path + '/statc', function() {
-      mkdir(path + '/statc/img');
-      mkdir(path + '/statc/css');
-      mkdir(path + '/statc/js');
-    });
-    mkdir(path + "/template");
-    mkdir(path + "/_data");
-  });
-
-  // manifest.json
-  var manifest = {
-    static_prefix: '.',
-    img_prefix: ".",
-    timeStampName:"_",
-    require_js_modules: ['main'],
-    require_css_modules: ['main'],
-    require_html_modules: ['index'],
-    local: {
-      static_prefix: ".",
-      img_prefix: ".",
-    },
-    online: {
-      static_prefix: ".",
-      img_prefix: ".",
-    },
-    serverplugins: [],
-    proxy: []
-  };
-
-  write(path + '/manifest.json', JSON.stringify(manifest, null, 2));
-};
+  console.log("copying files...".debug);
+  execSync("cp -R " + sysPath.join(__dirname, "../clo/*")+" "+path);
+}
 
 /**
  * Check if the given directory `path` is empty.
@@ -127,38 +112,11 @@ function createApplicationAt(path) {
  * @param {String} path
  * @param {Function} fn
  */
-
 function emptyDirectory(path, fn) {
+  console.log("%s".debug,path)
   fs.readdir(path, function(err, files) {
     if (err && 'ENOENT' != err.code) throw err;
     fn(!files || !files.length);
-  });
-}
-
-/**
- * echo str > path.
- *
- * @param {String} path
- * @param {String} str
- */
-
-function write(path, str) {
-  fs.writeFile(path, str);
-  console.log('   \x1b[36mcreate\x1b[0m : ' + path);
-}
-
-/**
- * Mkdir -p.
- *
- * @param {String} path
- * @param {Function} fn
- */
-
-function mkdir(path, fn) {
-  mkdirp(path, 0755, function(err) {
-    if (err) throw err;
-    console.log('   \033[36mcreate\033[0m : ' + path);
-    fn && fn();
   });
 }
 
@@ -169,6 +127,6 @@ function mkdir(path, fn) {
  */
 
 function abort(str) {
-  console.error(str);
+  console.error("%s".error,str);
   process.exit(1);
 }
