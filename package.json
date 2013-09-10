@@ -1,6 +1,6 @@
 {
   "name": "node-ursa",
-  "version": "0.0.1 beta",
+  "version": "0.0.1",
   "description": "Ursa system for javascript portable",
   "main": "index.js",
   "bin": {

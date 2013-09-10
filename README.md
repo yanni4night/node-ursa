@@ -48,7 +48,7 @@ node-ursa是一个用nodejs开发的，可以模拟服务器环境的前端开�
 
 ####生成线上静态文件
 
-	#node-ursa --build [project] --html --compress
+	#node-ursa --build [project] --html  --compress
 
 或者
 
@@ -61,4 +61,5 @@ project参数请查看manifest.json指南。
 changelog
 =========
 
+2013-09-10:修复了计算时间戳时没有引用生成后静态文件的bug，加入了test工程，加入了生成Tpl模板的支持。
 2013-09-09:首次提交，服务器和build基本功能完成，时间戳，压缩合并功能完成。
