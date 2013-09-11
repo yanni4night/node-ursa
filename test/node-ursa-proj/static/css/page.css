@@ -1,8 +1,10 @@
 body{
+	font: 14px/1.623 "Microsoft YAHEI","Sisum",arial,sans-serif;
+	font-weight: bold;
 	padding: 0;
 	margin: 0;
 	background: url(@img_prefix@/static/img/p.gif) repeat;
-	color:#fff;
+	color:green;
 } 
 
 .test{
@@ -10,5 +12,5 @@ body{
 	height: 100px;
 	position: absolute;left: 100px;
 	top:100px;
-	background: url(about:blank);
+	background: blue url(about:blank);
 }
