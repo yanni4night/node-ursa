@@ -1,16 +1,22 @@
-body{
-	font: 14px/1.623 "Microsoft YAHEI","Sisum",arial,sans-serif;
-	font-weight: bold;
-	padding: 0;
+body {
+	font: 14px/1.623 "Microsoft YAHEI","Simsun",arial,sans-serif;
 	margin: 0;
-	background: url(@img_prefix@/static/img/p.gif) repeat;
-	color:green;
-} 
-
-.test{
-	width: 100px;
-	height: 100px;
-	position: absolute;left: 100px;
-	top:100px;
-	background: blue url(about:blank);
+	padding: 0;
 }
+h1{font-size: 30px;margin-bottom: 10px;text-indent: 10px;}
+ul{list-style: disc inside;}
+a:visited { color: blue; }
+.row { border-bottom: 1px solid #dfdfdf; min-width: 900px; width: 100%; }
+.row .caption {
+	border-bottom: 1px dashed #dfdfdf;
+	color: #000;
+	font: 20px/25px "Microsoft YAHEI",arial,sans-serif;
+	font-weight: bold;
+	height: 25px;
+	overflow: hidden;
+	text-indent: 10px;
+	width: 100%;
+}
+.row .content { color: #333; padding: 10px; }
+
+.imp { color: red; font-weight: bolder; text-decoration: underline; }

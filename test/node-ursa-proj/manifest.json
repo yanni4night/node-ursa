@@ -8,6 +8,8 @@
         /*本地文本替换关键字*/
         "static_prefix": ".",
         "img_prefix": "../..",
+        "num":10,
+        "number":"{num}",
         
         /*发布文本替换关键字*/
         "online": {
