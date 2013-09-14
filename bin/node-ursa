@@ -5,16 +5,16 @@
  */
 
 var exec = require('child_process').exec,
-  program = require('commander'),//v1.2.0
+  program = require('commander'), //v1.2.0
   pkg = require('../package.json'),
   execSync = require('exec-sync'),
   version = pkg.version,
   os = require('os'),
   fs = require('fs'),
   build,
-  sysPath=require('path'),
+  sysPath = require('path'),
   ursa = require('../lib/ursa'),
-  utils=require('../lib/utils');
+  utils = require('../lib/utils');
 
 // CLI
 program
@@ -32,16 +32,16 @@ program
 
 if (program.init) {
 
-  var path=".";
-  if('boolean'!==typeof program.init){
-    path=program.init;
+  var path = ".";
+  if ('boolean' !== typeof program.init) {
+    path = program.init;
   }
 
   //Create at target path if exists
   if (fs.existsSync(path))
     createApplication(path);
   else
-    abort(path+" does not exist");
+    abort(path + " does not exist");
 
 } else if (program.start) {
 
@@ -51,16 +51,16 @@ if (program.init) {
 
 } else if (program.build) {
 
-  if('boolean'===typeof program.build||!program.build||program.build.constructor==Boolean)
-    program.build=null;
+  if ('boolean' === typeof program.build || !program.build || program.build.constructor == Boolean)
+    program.build = null;
   //按需加载，避免在Initialize时对build产生影响
-  build=require('../lib/build');
-  return build(program.build,!!program.compress,!!program.html);
+  build = require('../lib/build');
+  return build(program.build, !! program.compress, !! program.html);
 
 } else if (program.help) {
-  //Show help
+  console.log("https://github.com/yanni4night/node-ursa".info);//todo
 } else {
-  abort("Unknown parameters!");
+  console.log("https://github.com/yanni4night/node-ursa".info);
 }
 
 /**
@@ -68,6 +68,7 @@ if (program.init) {
  * @param  {type} path [description]
  * @return {type}      [description]
  */
+
 function createApplication(path) {
   emptyDirectory(path, function(empty) {
     if (empty) {
@@ -103,7 +104,7 @@ function createApplicationAt(path) {
   });
 
   console.log("copying files...".debug);
-  execSync("cp -R " + sysPath.join(__dirname, "../clo/*")+" "+path);
+  execSync("cp -R " + sysPath.join(__dirname, "../clo/*") + " " + path);
 }
 
 /**
@@ -112,8 +113,9 @@ function createApplicationAt(path) {
  * @param {String} path
  * @param {Function} fn
  */
+
 function emptyDirectory(path, fn) {
-  console.log("%s".debug,path)
+  console.log("%s".debug, path)
   fs.readdir(path, function(err, files) {
     if (err && 'ENOENT' != err.code) throw err;
     fn(!files || !files.length);
@@ -127,6 +129,6 @@ function emptyDirectory(path, fn) {
  */
 
 function abort(str) {
-  console.error("%s".error,str);
+  console.error("%s".error, str);
   process.exit(1);
 }
