@@ -1,8 +1,10 @@
 {       
         /*全局配置区*/
         "always_add_timestamp": 0,
+        "timestamp_name":"t",
+        "https":0,
         "require_js_modules": ["main"],
-        "require_css_modules": ["main", "page"],
+        "require_css_modules": ["main"],
         "require_html_modules": ["index"],
 
         /*本地文本替换关键字*/

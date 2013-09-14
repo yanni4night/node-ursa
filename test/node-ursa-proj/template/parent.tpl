@@ -7,24 +7,23 @@
         <style type="text/css">
 
         .blank{
+            background: url();
+            background: url(    );
+            background: url(#);
             background: url(about:blank);
-        }
-
-        .p{
-            background: url(@static_prefix@/static/img/p.gif) repeat;
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            left: 400px;
-            top: 200px;
+            background: url("about:blank");
+            background: url("data:image/png;base64:");
+            background: url(//account.sogou.com/static/img/index/loginbtn.png?t=123621);
+            background: url(//account.sogou.com/static/img/index/loginbtn.png);
         }
 
         </style>
     </head>
     <body {% block body_class %}{% endblock %}>
         {% block content %}{% endblock %}
+        {%include "common/foot.tpl"%}
     </body>
-    <script type="text/javascript" src="http://p0.123.sogou.com/u/js/mursa.js"></script>
+    <script type="text/javascript" src="//p0.123.sogou.com/u/js/mursa.js"></script>
     <script type="text/javascript" src="@static_prefix@/static/js/main.js"></script>
     {% block script_module %}{% endblock %}
     <script type="text/javascript">
