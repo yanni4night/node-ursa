@@ -2,6 +2,7 @@
         /*全局配置区*/
         "always_add_timestamp": 0,
         "timestamp_name":"t",
+        "server_add_timestamp":0,
         "https":0,
         "require_js_modules": ["main"],
         "require_css_modules": ["main"],
@@ -14,6 +15,8 @@
         /*发布文本替换关键字*/
         "online": {
             "static_prefix": ".",
-            "img_prefix": "../.."
+            "img_prefix": "../..",
+            "random":"{num}",
+            "num":8
         }
 }

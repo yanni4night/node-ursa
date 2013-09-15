@@ -1,8 +1,11 @@
 {       
         /*全局配置区*/
-        "always_add_timestamp": 0,
-        "https":0,
-        "require_js_modules": ["main"],
+        "always_add_timestamp": 1,
+        "server_add_timestamp":1,
+        "timestamp_name":"t",
+        "https":1,
+        "github":"https://github.com/yanni4night/node-ursa",
+        "require_js_modules": ["main","require.min"],
         "require_css_modules": ["main"],
         "require_html_modules": ["index","test/index"],
 
@@ -14,6 +17,7 @@
         
         /*发布文本替换关键字*/
         "online": {
+            "always_add_timestamp":0,
             "static_prefix": ".",
             "img_prefix": "../.."
         }

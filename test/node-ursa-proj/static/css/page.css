@@ -20,3 +20,9 @@ a:visited { color: blue; }
 .row .content { color: #333; padding: 10px; }
 
 .imp { color: red; font-weight: bolder; text-decoration: underline; }
+textarea{
+	width: 100%;
+	height: 100px;
+	color: #fff;
+	background: #000 url(@img_prefix@/static/img/p.gif) repeat;
+}
