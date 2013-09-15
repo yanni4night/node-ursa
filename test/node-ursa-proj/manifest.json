@@ -1,13 +1,13 @@
 {       
         /*全局配置区*/
-        "always_add_timestamp": 1,
+        "always_add_timestamp": 0,
         "https":0,
         "require_js_modules": ["main"],
-        "require_css_modules": ["main", "page"],
-        "require_html_modules": ["index"],
+        "require_css_modules": ["main"],
+        "require_html_modules": ["index","test/index"],
 
         /*本地文本替换关键字*/
-        "static_prefix": ".",
+        "static_prefix": "/.",
         "img_prefix": "../..",
         "num":10,
         "number":"{num}",

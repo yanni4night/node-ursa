@@ -1,7 +1,6 @@
 
 rm -rf build
 
-
-node-ursa -hcb
+node-ursa --build --compress --html
 
 
