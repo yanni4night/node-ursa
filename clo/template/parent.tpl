@@ -8,7 +8,7 @@
     <body {% block body_class %}{% endblock %}>
         {% block content %}{% endblock %}
     </body>
-    <script type="text/javascript" src="http://p0.123.sogou.com/u/js/mursa.js"></script>
+    <script type="text/javascript" src="http://p0.123.sogou.com/u/js/ursa.js"></script>
     <script type="text/javascript" src="@static_prefix@/static/js/main.js"></script>
     {% block script_module %}{% endblock %}
     <script type="text/javascript">

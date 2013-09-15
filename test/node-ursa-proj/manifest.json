@@ -1,7 +1,7 @@
 {       
         /*全局配置区*/
         "always_add_timestamp": 1,
-        "https":1,
+        "https":0,
         "require_js_modules": ["main"],
         "require_css_modules": ["main", "page"],
         "require_html_modules": ["index"],
