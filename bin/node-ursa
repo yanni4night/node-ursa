@@ -28,8 +28,6 @@ program
   .option('--help', 'Show help')
   .parse(process.argv);
 
-//process.exit(0);
-
 if (program.init) {
 
   var path = ".";
@@ -57,9 +55,13 @@ if (program.init) {
   build = require('../lib/build');
   return build(program.build, !! program.compress, !! program.html);
 
-} else if (program.help) {
-  console.log("https://github.com/yanni4night/node-ursa".info);//todo
 } else {
+  console.log("init an app:\r\n".debug,"$node-ursa --init".info,"\r\nor\r\n".warn,"$node-ursa -i".info);
+  console.log("build an app:\r\n".debug,"$node-ursa --build [project]".info,"\r\nor\r\n".warn,"$node-ursa -b [project]".info);
+  console.log("compress css&js files:\r\n".debug,"$node-ursa --build [project] --compress".info,"\r\nor\r\n".warn,"$node-ursa -b [project] -c".info);
+  console.log("generate html files:\r\n".debug,"$node-ursa --build [project] --html".info,"\r\nor\r\n".warn,"$node-ursa -b [project] -h".info);
+  console.log("start the server:\r\n".debug,"$node-ursa --start [port]".info,"\r\nor\r\n".warn,"$node-ursa -s [port]".info);
+  console.log("see more:");
   console.log("https://github.com/yanni4night/node-ursa".info);
 }
 
@@ -95,16 +97,15 @@ function createApplication(path) {
 function createApplicationAt(path) {
   process.on('exit', function() {
     console.log();
-    console.log('   install dependencies:'.verbose);
-    console.log('     npm install'.verbose);
-    console.log();
     console.log('   run the app:'.verbose);
     console.log('     $ node-ursa --start [port]'.verbose);
+    console.log('   build the app:'.verbose);
+    console.log('     $ node-ursa --build [project] [--compress] [--html]'.verbose);
     console.log();
   });
 
   console.log("copying files...".debug);
-  execSync("cp -R " + sysPath.join(__dirname, "../clo/*") + " " + path);
+  console.log("%s".cmd,execSync("cp -R " + sysPath.join(__dirname, "../clo/*") + " " + path));
 }
 
 /**
