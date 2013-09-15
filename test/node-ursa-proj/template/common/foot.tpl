@@ -1,2 +1,2 @@
 <hr/>
-&copy; All Rights Reserved
+{{project}} &copy; All Rights Reserved
