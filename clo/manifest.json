@@ -1,11 +1,17 @@
 {       
         /*全局配置区*/
         "always_add_timestamp": 0,
+        /*时间戳名称，如index?t=stamp*/
         "timestamp_name":"t",
+        /*服务器模式中是否为静态资源加时间戳，会减慢响应速度*/
         "server_add_timestamp":0,
+        /*HTTP或HTTPS，不能同时*/
         "https":0,
+        /*需要处理的js文件，相对于./static/js，默认搜索所有js*/
         "require_js_modules": ["main"],
+        /*需要处理的css文件，相对于./static/css，默认所有css*/
         "require_css_modules": ["main"],
+        /*需要最终生成的 html文件，相对于./template，默认不生成任何HTML*/
         "require_html_modules": ["index"],
 
         /*本地文本替换关键字*/
@@ -18,5 +24,11 @@
             "img_prefix": "../..",
             "random":"{num}",
             "num":8
+        },
+        /*代理，支持正则、精确、子串匹配*/
+        "proxy":{
+            "regex:/ajax/(.*)":"http://localhost/php/ajax/$1",
+            "exact:/test?au=9&d=2013":"http://localhost/php/test.php",
+            "/echo/":"http://localhost/php/echo.php"
         }
 }

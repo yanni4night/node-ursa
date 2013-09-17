@@ -1,7 +1,7 @@
 node-ursa
 =========
 
-node-ursa是一个用nodejs开发的，可以模拟服务器环境的前端开发环境。使用它可以实时查看HTML页面样式，并能最终生成经过优化的，可用于线上环境的javascript,css和HTML模板文件，从而提高前端开发效率，降低前后端工作的耦合度。
+node-ursa是一个用nodejs开发的、可以模拟服务器环境的前端开发环境。使用它可以实时查看HTML页面样式，并能最终生成经过优化的，可用于线上环境的javascript,css和HTML模板文件，从而提高前端开发效率，降低前后端工作的耦合度。
 
 ##主要功能
  - HTTP服务器，提供模拟线上环境的本地开发服务器;
@@ -66,6 +66,7 @@ project参数请查看manifest.json指南。
 
 changelog
 =========
+ - 2013-09-17:支持三种proxy模式
  - 2013-09-15:支持HTTPS访问；修复了一些bug；支持always_add_timestamp选项；优化了build的日志显示和命令行HELP信息，增加server_add_timestamp选项，支持_ursa.json公共数据文件。
  - 2013-09-14:添加了_token/_sutoken/_folder三个内部变量；支持{num}随机参量；规范化测试页面；合并Server和build的公共处理模块。
  - 2013-09-10:修复了计算时间戳时没有引用生成后静态文件的bug，加入了test工程，加入了生成Tpl模板的支持。

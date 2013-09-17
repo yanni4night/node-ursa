@@ -21,7 +21,9 @@
     "swig":"*",
     "mime":"*",
     "exec-sync":"*",
-    "colors":"*"
+    "colors":"*",
+    "velocityjs":"*",
+    "request":"*"
   }
 
 }
