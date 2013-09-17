@@ -28,6 +28,6 @@
             /*完全匹配(包括GET参数与HASH)*/
             "exact:/test/":"http://www.sogou.com",
             /*子串匹配*/
-            "qq":"http://www.qq.com"
+            "qq":"www.qq.com"
         }
 }
