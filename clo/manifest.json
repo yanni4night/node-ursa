@@ -7,6 +7,8 @@
         "server_add_timestamp":0,
         /*HTTP或HTTPS，不能同时*/
         "https":0,
+        /*模板引擎，默认twig*/
+        "engine":"twig",
         /*需要处理的js文件，相对于./static/js，默认搜索所有js*/
         "require_js_modules": ["main"],
         /*需要处理的css文件，相对于./static/css，默认所有css*/

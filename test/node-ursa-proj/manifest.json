@@ -4,6 +4,7 @@
         "server_add_timestamp":1,
         "timestamp_name":"t",
         "https":0,
+        "engine":"jade",
         "github":"https://github.com/yanni4night/node-ursa",
         "require_js_modules": ["main","require.min"],
         "require_css_modules": ["main"],

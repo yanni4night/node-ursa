@@ -1,4 +1,4 @@
-{% extends "parent.tpl" %}
+{% extends "./parent.tpl" %}
 
 {% block content %}
 <h1>Test suit</h1>

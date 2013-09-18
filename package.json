@@ -22,7 +22,10 @@
     "mime":"*",
     "exec-sync":"*",
     "colors":"*",
-    "request":"*"
+    "request":"*",
+    "twig":"*",
+    "ejs":"*",
+    "jade":"*"
   }
 
 }
