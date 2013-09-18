@@ -75,13 +75,13 @@ changelog
 
  support
  =========
-  - [node](https://github.com/joyent/node])
-  - [commander](https://github.com/visionmedia/commander.js])
-  - [mkdirp](https://github.com/substack/node-mkdirp])
-  - [twig](https://github.com/justjohn/twig.js])
-  - [ejs](https://github.com/visionmedia/ejs])
-  - [jade](https://github.com/visionmedia/jade])
-  - [mime](https://github.com/broofa/node-mime])
-  - [exec](sync:https://github.com/jeremyfa/node-exec-sync])
-  - [colors](https://github.com/Marak/colors.js])
-  - [request](https://github.com/mikeal/request])
+  - [node](https://github.com/joyent/node)
+  - [commander](https://github.com/visionmedia/commander.js)
+  - [mkdirp](https://github.com/substack/node-mkdirp)
+  - [twig](https://github.com/justjohn/twig.js)
+  - [ejs](https://github.com/visionmedia/ejs)
+  - [jade](https://github.com/visionmedia/jade)
+  - [mime](https://github.com/broofa/node-mime)
+  - [exec](sync:https://github.com/jeremyfa/node-exec-sync)
+  - [colors](https://github.com/Marak/colors.js)
+  - [request](https://github.com/mikeal/request)
