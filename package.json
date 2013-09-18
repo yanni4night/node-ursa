@@ -22,7 +22,6 @@
     "mime":"*",
     "exec-sync":"*",
     "colors":"*",
-    "velocityjs":"*",
     "request":"*"
   }
 

@@ -71,3 +71,14 @@ changelog
  - 2013-09-14:添加了_token/_sutoken/_folder三个内部变量；支持{num}随机参量；规范化测试页面；合并Server和build的公共处理模块。
  - 2013-09-10:修复了计算时间戳时没有引用生成后静态文件的bug，加入了test工程，加入了生成Tpl模板的支持。
  - 2013-09-09:首次提交，服务器和build基本功能完成，时间戳，压缩合并功能完成。
+
+ support
+ =========
+  - node:https://github.com/joyent/node
+  - commander:https://github.com/visionmedia/commander.js
+  - mkdirp:https://github.com/substack/node-mkdirp
+  - swig:https://github.com/paularmstrong/swig
+  - mime:https://github.com/broofa/node-mime
+  - exec-sync:https://github.com/jeremyfa/node-exec-sync
+  - colors:https://github.com/Marak/colors.js
+  - request:https://github.com/mikeal/request
