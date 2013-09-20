@@ -5,7 +5,7 @@
         "timestamp_name":"t",
         "https":0,
         "engine":"twig",
-        "log_level":"error",
+        "log_level":"info",
         "github":"https://github.com/yanni4night/node-ursa",
         "require_js_modules": ["main","require.min"],
         "require_css_modules": ["main"],
