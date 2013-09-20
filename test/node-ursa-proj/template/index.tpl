@@ -3,16 +3,16 @@
 {% block content %}
 <h1>Test suit</h1>
 <div class="row">
-	<div class="caption">Tempalte engine output variable test</div>
+	<div class="caption">Tempalte engine output variable</div>
 	<div class="content"><var class="imp">{{name}}</var> is defined in _data/index.tpl.You can go to <a href="index.m">here</a> to change it.</div>
 </div>
 <div class="row">
-	<div class="caption">Tempalte engine output object test</div>
+	<div class="caption">Tempalte engine output object</div>
 	<div class="content">My computer has a <var class="imp">{{computer.Display}}</var> display,a <var class="imp">{{computer.CPU}}</var> CPU,a <var class="imp">{{computer.Keybord}}</var> keybord and a <var class="imp">{{computer.Disk}}</var> disk.</div>
 </div>
 
 <div class="row">
-	<div class="caption">Tempalte engine output array test</div>
+	<div class="caption">Tempalte engine output array</div>
 	<div class="content">
 	<ul>
 		{%for e in famous%}
@@ -22,7 +22,7 @@
 	</div>
 </div>
 <div class="row">
-	<div class="caption">@ date @:UNIX timestamp auto replace test</div>
+	<div class="caption">@ date @:UNIX timestamp auto replace</div>
 	<div class="content">The current UNIX timestamp is <var class="imp">@date@</var>.</div>
 </div>
 <div class="row">
@@ -85,6 +85,7 @@
 		You will find a <var class="imp">@timestamp_name@</var> timestamp will append to each script&amp;link element.
 		<textarea disabled>
 <script type="text/javascript" src="@static_prefix@/static/js/require.min.js"></script>
+<script type="text/javascript" src="http://codeorigin.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="@static_prefix@/static/css/main.css?y=0" type="text/css"/>
 		</textarea>
 	</div>
