@@ -1,10 +1,11 @@
 define('main', ["text!./tpl/list.tpl", "./test/index"], function(tpl, text_index) {
 	return {
 		common: function() {
-			window['console'] && (undefined !== tpl) && console.log("text loaded:\n[%s]", tpl);
+			window['console'] && (undefined !== tpl) && console.log("文本加载成功:\n[%s]", tpl);
 		},
 		index: function() {
 			window['console'] && console.log("This is index module");
+			/*向DOM中写文本*/
 			var target = document.getElementById("requirejs-text-content");
 			if (target) {
 				if (undefined !== target.innerText) {

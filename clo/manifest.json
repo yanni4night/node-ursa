@@ -3,7 +3,7 @@
         "always_add_timestamp": 0,
         /*时间戳名称，如t，即index?t=stamp*/
         "timestamp_name":"t",
-        /*服务器模式中是否为静态资源加时间戳，会减慢响应速度*/
+        /*服务器模式中是否为静态资源加时间戳，会减慢响应速度，仅指CSS和HTML文件*/
         "server_add_timestamp":0,
         /*HTTP或HTTPS，不能同时*/
         "https":0,
@@ -11,6 +11,8 @@
         "engine":"twig",
         /*控制台日子打印级别,可选为info,warn,error,默认为info*/
         "log_level":"info",
+         /*是否转义JS中的多字节字符,仅在build时有效*/
+        "js_utf8_escape":1,
         /*需要处理的js文件，相对于./static/js，默认不处理任何js*/
         "require_js_modules": ["main"],
         /*需要处理的css文件，相对于./static/css，默认所有css*/

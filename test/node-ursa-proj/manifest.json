@@ -6,10 +6,11 @@
         "https":0,
         "engine":"twig",
         "log_level":"info",
+        "js_utf8_escape":1,
         "github":"https://github.com/yanni4night/node-ursa",
         "require_js_modules": ["main","require.min"],
         "require_css_modules": ["main"],
-        "require_html_modules": ["index","test/index"],
+        "require_html_modules": ["test/index"],
 
         /*本地文本替换关键字*/
         "static_prefix": "/.",
