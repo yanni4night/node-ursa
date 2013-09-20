@@ -26,10 +26,10 @@
         /*代理只支持UTF-8*/
         "proxy":{
             /*正则匹配*/
-            "regex:/xinwen/(.*)":"http://123.sogou.com/$1",
+            "regex:/dgtle/(.*)":"http://www.dgtle.com/$1",
             /*完全匹配(包括GET参数与HASH)*/
-            "exact:/test/":"http://www.sogou.com",
+            "exact:/baidu/":"http://www.baidu.com",
             /*子串匹配*/
-            "qq":"www.qq.com"
+            "bing":"www.bing.com"
         }
 }

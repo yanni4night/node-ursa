@@ -1,36 +1,43 @@
 {       
-        /*全局配置区*/
+        /*即使不是相对路径也要加时间戳；该时间为UNIX时间戳*/
         "always_add_timestamp": 0,
-        /*时间戳名称，如index?t=stamp*/
+        /*时间戳名称，如t，即index?t=stamp*/
         "timestamp_name":"t",
         /*服务器模式中是否为静态资源加时间戳，会减慢响应速度*/
         "server_add_timestamp":0,
         /*HTTP或HTTPS，不能同时*/
         "https":0,
-        /*模板引擎，默认twig*/
+        /*模板引擎，默认twig，可选twig,ejs,jade*/
         "engine":"twig",
-        /*需要处理的js文件，相对于./static/js，默认搜索所有js*/
+        /*控制台日子打印级别,可选为info,warn,error,默认为info*/
+        "log_level":"info",
+        /*需要处理的js文件，相对于./static/js，默认不处理任何js*/
         "require_js_modules": ["main"],
         /*需要处理的css文件，相对于./static/css，默认所有css*/
         "require_css_modules": ["main"],
-        /*需要最终生成的 html文件，相对于./template，默认不生成任何HTML*/
+        /*需要最终生成的 html文件，相对于./template，默认生成所有HTML*/
         "require_html_modules": ["index"],
 
         /*本地文本替换关键字*/
         "static_prefix": ".",
         "img_prefix": "../..",
         
-        /*发布文本替换关键字*/
+        /*线上文本替换关键字*/
         "online": {
             "static_prefix": ".",
             "img_prefix": "../..",
+            /*引用一个随机数*/
             "random":"{num}",
+            /*随机数最大值*/
             "num":8
         },
         /*代理，支持正则、精确、子串匹配*/
         "proxy":{
+            /*正则,以regex:开头，无需转义，不区分大小写*/
             "regex:/ajax/(.*)":"http://localhost/php/ajax/$1",
-            "exact:/test?au=9&d=2013":"http://localhost/php/test.php",
+            /*精确搜索，包括路径和参数都要匹配才会命中*/
+            "exact:/test":"http://localhost/php/test.php",
+            /*子串匹配，URL包括参数包括关键字即命中*/
             "/echo/":"http://localhost/php/echo.php"
         }
 }
