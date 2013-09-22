@@ -18,14 +18,12 @@
   "dependencies": {
     "commander": "1.2.0",
     "mkdirp": "0.3.5",
-    "swig":"*",
-    "mime":"*",
-    "exec-sync":"*",
-    "colors":"*",
-    "request":"*",
-    "twig":"*",
-    "ejs":"*",
-    "jade":"*"
+    "mime": "*",
+    "exec-sync": "*",
+    "colors": "*",
+    "request": "*",
+    "twig": "*",
+    "ejs": "*",
+    "jade": "*"
   }
-
 }
