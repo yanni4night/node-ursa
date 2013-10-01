@@ -7,7 +7,7 @@
     </head>
     <body {% block body_class %}{% endblock %}>
         {% block content %}{% endblock %}
-        {%include "./common/foot.tpl"%}
+        {%include "common/foot.tpl"%}
     </body>
     <script type="text/javascript" src="@static_prefix@/static/js/require.min.js"></script>
     <script type="text/javascript" src="@static_prefix@/static/js/main.js"></script>

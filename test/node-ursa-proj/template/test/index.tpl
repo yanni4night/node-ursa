@@ -1,4 +1,4 @@
-{% extends "../parent.tpl" %}
+{% extends "parent.tpl" %}
 
 {% block content %}
 <h1>测试示例</h1>
