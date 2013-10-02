@@ -11,6 +11,8 @@
         "enable_proxy":1,
         /*HTTP或HTTPS，不能同时*/
         "https":0,
+        /*模板目录*/
+        "template_dir":"./template",
         /*模板引擎，默认twig，可选twig,ejs,jade*/
         "engine":"twig",
         /*控制台日子打印级别,可选为info,warn,error,默认为info*/
