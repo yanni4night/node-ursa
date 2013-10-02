@@ -25,11 +25,10 @@ program
   .option('-c,--compress', 'Compress js&css')
   .option('-h,--html', 'Generate html')
   .option('-s,--start [port]', 'Start ursa server')
-  .option('--help', 'Show help')
+  .option('-v,--version', "Show version")
   .parse(process.argv);
 
 if (program.init) {
-
   var path = ".";
   if ('boolean' !== typeof program.init) {
     path = program.init;
@@ -56,13 +55,21 @@ if (program.init) {
   return build(program.build, !! program.compress, !! program.html);
 
 } else {
-  console.log("init an app:\r\n".debug,"$node-ursa --init".info,"\r\nor\r\n".warn,"$node-ursa -i".info);
-  console.log("build an app:\r\n".debug,"$node-ursa --build [project]".info,"\r\nor\r\n".warn,"$node-ursa -b [project]".info);
-  console.log("compress css&js files:\r\n".debug,"$node-ursa --build [project] --compress".info,"\r\nor\r\n".warn,"$node-ursa -b [project] -c".info);
-  console.log("generate html files:\r\n".debug,"$node-ursa --build [project] --html".info,"\r\nor\r\n".warn,"$node-ursa -b [project] -h".info);
-  console.log("start the server:\r\n".debug,"$node-ursa --start [port]".info,"\r\nor\r\n".warn,"$node-ursa -s [port]".info);
+  console.log("init an app:\r\n".debug, "$node-ursa --init".info, "\r\nor\r\n".warn, "$node-ursa -i".info);
+  console.log("build an app:\r\n".debug, "$node-ursa --build [project]".info, "\r\nor\r\n".warn, "$node-ursa -b [project]".info);
+  console.log("compress css&js files:\r\n".debug, "$node-ursa --build [project] --compress".info, "\r\nor\r\n".warn, "$node-ursa -b [project] -c".info);
+  console.log("generate html files:\r\n".debug, "$node-ursa --build [project] --html".info, "\r\nor\r\n".warn, "$node-ursa -b [project] -h".info);
+  console.log("start the server:\r\n".debug, "$node-ursa --start [port]".info, "\r\nor\r\n".warn, "$node-ursa -s [port]".info);
   console.log("see more:");
   console.log("https://github.com/yanni4night/node-ursa".info);
+  console.log();
+  console.log("#    #  ####  #####  ######    #    # #####   ####    ##   ".cmd);
+  console.log("##   # #    # #    # #         #    # #    # #       #  #  ".cmd);
+  console.log("# #  # #    # #    # #####     #    # #    #  ####  #    # ".cmd);
+  console.log("#  # # #    # #    # #         #    # #####       # ###### ".cmd);
+  console.log("#   ## #    # #    # #         #    # #   #  #    # #    # ".cmd);
+  console.log("#    #  ####  #####  ######     ####  #    #  ####  #    # ".cmd);
+  console.log();
 }
 
 /**
@@ -105,7 +112,7 @@ function createApplicationAt(path) {
   });
 
   console.log("copying files...".debug);
-  console.log("%s".cmd,execSync("cp -R " + sysPath.join(__dirname, "../clo/*") + " " + path));
+  console.log("%s".cmd, execSync("cp -R " + sysPath.join(__dirname, "../clo/*") + " " + path));
 }
 
 /**

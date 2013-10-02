@@ -1,17 +1,15 @@
 {
   "name": "node-ursa",
   "version": "0.0.1",
-  "description": "Ursa system for javascript portable",
-  "main": "index.js",
+  "description": "A front end development workbench with server/https/template engine/optimization tools support",
+  "main": "./lib/index.js",
   "bin": {
     "node-ursa": "./bin/node-ursa"
   },
-  "scripts": {
-    "test": "node app.js"
-  },
   "keywords": [
     "ursa",
-    "node"
+    "node",
+    "fe"
   ],
   "author": "yanni4night@gmail.com",
   "license": "MIT",

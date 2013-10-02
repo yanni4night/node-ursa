@@ -1,12 +1,16 @@
 {% extends "parent.tpl" %}
 
+{% block page_title %}
+Node-ursa Test Suit
+{% endblock %}
+
 {% block content %}
 <h1>测试示例</h1>
 <div class="row">
 	<div class="caption">模板引擎简单变量的输出</div>
 	<div class="content">
 		<var class="imp">{{name}}</var>
-		定义在in _data/index.tpl中.你可以点击
+		定义在in _data/test/index.tpl中.你可以点击
 		<a href="index.m">这里</a>
 		修改参数.
 	</div>
@@ -90,7 +94,7 @@
 	<div class="content">
 		<var class="imp">{{project}}</var>
 		没有定义在 _data/index.json 中，而是 _data/_ursa.json.点击
-		<a href="_ursa.m">这里</a>
+		<a href="/_ursa.m">这里</a>
 		修改数据.
 	</div>
 </div>

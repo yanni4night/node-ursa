@@ -1,10 +1,14 @@
 {       
+        /****************************/
+        /*全局环境配置区*/
         /*即使不是相对路径也要加时间戳；该时间为UNIX时间戳*/
         "always_add_timestamp": 0,
         /*时间戳名称，如t，即index?t=stamp*/
         "timestamp_name":"t",
         /*服务器模式中是否为静态资源加时间戳，会减慢响应速度，仅指CSS和HTML文件*/
         "server_add_timestamp":0,
+        /*是否开启代理，关闭可提高开发服务器响应速度*/
+        "enable_proxy":1,
         /*HTTP或HTTPS，不能同时*/
         "https":0,
         /*模板引擎，默认twig，可选twig,ejs,jade*/
@@ -20,6 +24,7 @@
         /*需要最终生成的 html文件，相对于./template，默认生成所有HTML*/
         "require_html_modules": ["index"],
 
+        /****************************/
         /*本地文本替换关键字*/
         "static_prefix": ".",
         "img_prefix": "../..",

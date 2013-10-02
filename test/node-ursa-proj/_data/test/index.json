@@ -1,3 +1,5 @@
 {
-	"author":"yanni4night@sogou-inc.com"
+    "name":"node-ursa workbench",
+    "famous":["John Winston Lennon","Marilyn Monroe","Kobe Bryant","Jackie Chan"],
+    "computer":{"Display":"戴尔","CPU":"英特尔","Keybord":"Cherry","Disk":"日立"}
 }
