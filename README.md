@@ -70,6 +70,8 @@ doc
 =========
  - [Manifest.json配置文件详解](https://github.com/yanni4night/node-ursa/wiki/Manifest.json%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3)
 
+ - [代码处理工序](https://github.com/yanni4night/node-ursa/wiki/%E4%BB%A3%E7%A0%81%E5%A4%84%E7%90%86%E5%B7%A5%E5%BA%8F)
+
 changelog
 =========
  - 2013-10-02:增加enable_proxy开关和template_dir配置项，不再支持jade引擎
@@ -92,3 +94,9 @@ changelog
   - [exec](sync:https://github.com/jeremyfa/node-exec-sync)
   - [colors](https://github.com/Marak/colors.js)
   - [request](https://github.com/mikeal/request)
+
+todo
+=========
+ - less support
+ - velocity support
+ - coffeescript support
