@@ -19,6 +19,7 @@
         "num":10,
         "number":"{num}",
         
+        "local":{},
         /*发布文本替换关键字*/
         "online": {
             "always_add_timestamp":0,

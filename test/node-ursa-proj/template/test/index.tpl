@@ -11,7 +11,7 @@ Node-ursa Test Suit
 	<div class="content">
 		<var class="imp">{{name}}</var>
 		定义在in _data/test/index.tpl中.你可以点击
-		<a href="index.m">这里</a>
+		<a href="/test/index.m">这里</a>
 		修改参数.
 	</div>
 </div>
