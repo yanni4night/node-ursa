@@ -5,7 +5,7 @@ Node-ursa Test Suit
 {% endblock %}
 
 {% block content %}
-<h1>测试示例</h1>
+<h1>测试示例- @engine@</h1>
 <div class="row">
 	<div class="caption">模板引擎简单变量的输出</div>
 	<div class="content">

@@ -1,2 +1,2 @@
 <hr/>
-{{project}} &copy; All Rights Reserved
+{{project}} &copy; All Rights Reserved.@engine@ support.

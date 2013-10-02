@@ -32,12 +32,8 @@
             
             <h1>Template List</h1>
             <ul class="tlist">
-                {% for tpl in tpls %}
-                <li>
-                    <a class="title" href="{{tpl}}.ut">{{tpl}}</a>
-                    <a class="mgr" href="{{tpl}}.m">mgr</a>
-                </li>
-                {% endfor %}
+                <!--字符串替换，不再使用模板引擎渲染，这样可以夸引擎-->
+               __TPL_HTML_STR__
             </ul>
         </div>
     </body>

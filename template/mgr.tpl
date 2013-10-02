@@ -38,16 +38,18 @@
             return null;
         }
         function validate(){
+            var json=$v('data').replace(/\/\*[\s\S]*?\*\//img.'');
             try{
                 if('undefined'!==typeof JSON && JSON.parse){
-                    JSON.parse($v('data'));
+                    JSON.parse(json);
                 }else
                 {
-                    eval($v('data'));
+                    eval(json);
                 }
 
                 return true;
             }catch(e){
+                alert("Invalid JSON");
                 return false;
             }
         }
@@ -55,6 +57,7 @@
     </head>
     <body>
         <div class="wrapper">
+            <!--夸模板语法考虑，这里不再使用引擎渲染-->
             <h1>Data Manager for Tpl => {{name}}</h1>
             <form method="post" id="ursa" action="/data.so" onsubmit="return validate();">
                 <p class="desc">
