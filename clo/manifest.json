@@ -51,5 +51,7 @@
             "exact:/test":"http://localhost/php/test.php",
             /*子串匹配，URL包括参数包括关键字即命中*/
             "/echo/":"http://localhost/php/echo.php"
-        }
+        },
+        /*自定义插件*/
+        "serverplugins":[]
 }

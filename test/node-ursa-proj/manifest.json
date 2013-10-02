@@ -35,5 +35,6 @@
             "exact:/baidu/":"http://www.baidu.com",
             /*子串匹配*/
             "bing":"www.bing.com"
-        }
+        },
+        "serverplugins":["./plugin/plugin.insight"]
 }

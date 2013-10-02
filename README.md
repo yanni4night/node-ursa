@@ -69,12 +69,12 @@ project参数请查看manifest.json指南。
 doc
 =========
  - [Manifest.json配置文件详解](https://github.com/yanni4night/node-ursa/wiki/Manifest.json%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3)
-
  - [代码处理工序](https://github.com/yanni4night/node-ursa/wiki/%E4%BB%A3%E7%A0%81%E5%A4%84%E7%90%86%E5%B7%A5%E5%BA%8F)
+ - [插件书写规则](https://github.com/yanni4night/node-ursa/wiki/%E6%8F%92%E4%BB%B6%E4%B9%A6%E5%86%99%E8%A7%84%E5%88%99)
 
 changelog
 =========
- - 2013-10-02:增加enable_proxy开关和template_dir配置项，不再支持jade引擎
+ - 2013-10-02:增加enable_proxy开关和template_dir配置项，不再支持jade引擎，支持插件
  - 2013-09-20:增加js_utf8_escape选项，用以支持js多字节转义；模板引擎去缓存化配置
  - 2013-09-18:复用模板引擎给[express](https://github.com/visionmedia/express)的接口，支持所有express支持的模板引擎，现阶段加入twig、ejs、jade
  - 2013-09-17:支持三种proxy模式

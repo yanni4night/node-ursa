@@ -162,6 +162,7 @@ Node-ursa Test Suit
 		</textarea>
 	</div>
 </div>
+__INSIGHT_PLUGIN__
 <div class="row">
 	<div class="caption">proxy正则匹配</div>
 	<div class="content">
