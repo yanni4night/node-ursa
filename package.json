@@ -1,6 +1,6 @@
 {
   "name": "node-ursa",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A front end development workbench with server/https/template engine/optimization tools support",
   "main": "./lib/index.js",
   "bin": {

@@ -16,13 +16,15 @@ node-ursa是一个用nodejs开发的、可以模拟服务器环境的前端开�
 
 ####安装node-ursa
 
-在node-ursa目录下执行npm命令安装依赖即可：
+安装node-ursa需要[npm](https://npmjs.org)的支持，并以全局方式安装：
 	
-	#npm install
+	#npm install -g node-ursa
+
+这可能需要root权限。
 
 ####创建node-ursa项目
 
-使用node-ursa命令创建：
+使用node-ursa命令创建工作目录：
 
 	#node-ursa --init [path]
 
@@ -46,7 +48,7 @@ node-ursa是一个用nodejs开发的、可以模拟服务器环境的前端开�
 
 端口未指定则默认为8899。
 
-访问服务器:http://localhost:[port]。暂时不支持https形式访问。
+访问服务器:http://localhost:[port]。通过配置可以支持https形式的访问，但不能同时以HTTP和HTTPS的形式访问。
 
 ####开发
 
@@ -62,10 +64,11 @@ node-ursa是一个用nodejs开发的、可以模拟服务器环境的前端开�
 
 project参数请查看manifest.json指南。
 	
-./build下即是可以部署到线上的静态文件。
+./build下即是可以部署到线上的静态文件和HTML模板。
 
 changelog
 =========
+ - 2013-10-02:增加enable_proxy开关
  - 2013-09-20:增加js_utf8_escape选项，用以支持js多字节转义；模板引擎去缓存化配置
  - 2013-09-18:复用模板引擎给[express](https://github.com/visionmedia/express)的接口，支持所有express支持的模板引擎，现阶段加入twig、ejs、jade
  - 2013-09-17:支持三种proxy模式
