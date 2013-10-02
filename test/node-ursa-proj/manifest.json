@@ -15,15 +15,15 @@
         "require_html_modules": ["test/index"],
 
         /*本地文本替换关键字*/
-        "static_prefix": "/.",
-        "img_prefix": "../..",
         "num":10,
         "number":"{num}",
         
-        "local":{},
+        "local":{
+        "static_prefix": "/.",
+        "img_prefix": "../.."
+            },
         /*发布文本替换关键字*/
         "online": {
-            "always_add_timestamp":0,
             "static_prefix": ".",
             "img_prefix": "../.."
         },

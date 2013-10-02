@@ -9,7 +9,14 @@
   "keywords": [
     "ursa",
     "node",
-    "fe"
+    "fe",
+    "twig",
+    "ejs",
+    "optimization",
+    "server",
+    "template",
+    "development",
+    "workbench"
   ],
   "author": "yanni4night@gmail.com",
   "license": "MIT",
