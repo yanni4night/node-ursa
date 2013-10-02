@@ -66,9 +66,13 @@ project参数请查看manifest.json指南。
 	
 ./build下即是可以部署到线上的静态文件和HTML模板。
 
+doc
+=========
+ - [Manifest.json配置文件详解](https://github.com/yanni4night/node-ursa/wiki/Manifest.json%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3)
+
 changelog
 =========
- - 2013-10-02:增加enable_proxy开关
+ - 2013-10-02:增加enable_proxy开关和template_dir配置项，不再支持jade引擎
  - 2013-09-20:增加js_utf8_escape选项，用以支持js多字节转义；模板引擎去缓存化配置
  - 2013-09-18:复用模板引擎给[express](https://github.com/visionmedia/express)的接口，支持所有express支持的模板引擎，现阶段加入twig、ejs、jade
  - 2013-09-17:支持三种proxy模式
@@ -84,7 +88,6 @@ changelog
   - [mkdirp](https://github.com/substack/node-mkdirp)
   - [twig](https://github.com/justjohn/twig.js)
   - [ejs](https://github.com/visionmedia/ejs)
-  - [jade](https://github.com/visionmedia/jade)
   - [mime](https://github.com/broofa/node-mime)
   - [exec](sync:https://github.com/jeremyfa/node-exec-sync)
   - [colors](https://github.com/Marak/colors.js)

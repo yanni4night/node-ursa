@@ -21,7 +21,6 @@
     "colors": "*",
     "request": "*",
     "twig": "*",
-    "ejs": "*",
-    "jade": "*"
+    "ejs": "*"
   }
 }
