@@ -6,6 +6,10 @@
   "bin": {
     "node-ursa": "./bin/node-ursa"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yanni4night/node-ursa"
+  },
   "keywords": [
     "ursa",
     "node",
