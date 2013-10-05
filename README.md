@@ -10,7 +10,8 @@ node-ursa是一个用nodejs开发的、可以模拟服务器环境的前端开�
  - 多模板引擎支持，提高HTML开发效率;
  - 模拟服务器数据;
  - 基于require.js的js和css文件合并;
- - 基于YUI的js和css文件压缩。
+ - 基于YUI的js和css文件压缩；
+ - 支持LESS。
 
 ##使用方法
 
@@ -94,9 +95,9 @@ changelog
   - [exec](sync:https://github.com/jeremyfa/node-exec-sync)
   - [colors](https://github.com/Marak/colors.js)
   - [request](https://github.com/mikeal/request)
+  - [less](https://github.com/less/less.js)
 
 todo
 =========
- - less support
  - velocity support
  - coffeescript support

@@ -164,6 +164,14 @@ Node-ursa Test Suit
 </div>
 __INSIGHT_PLUGIN__
 <div class="row">
+	<div class="caption">LESS</div>
+	<div class="content"><span class="less">你可以修改/static/less/sub/sub.less的内容来改版这里的样式。</span></div>
+</div>
+	<div class="row">
+		<div class="caption">图片</div>
+		<div class="content"><img src="@static_prefix@/static/img/protocol.png" alt=""></div>
+	</div>
+<div class="row">
 	<div class="caption">proxy正则匹配</div>
 	<div class="content">
 		<p>下面iframe的src为/dgtle/，实际通过正则表达式<span class="imp">regex:/dgtle/(.*)</span>代理到指向http://www.dgtle.com</p>

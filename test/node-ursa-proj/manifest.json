@@ -36,5 +36,10 @@
             /*子串匹配*/
             "bing":"www.bing.com"
         },
-        "serverplugins":["./plugin/plugin.insight"]
+        "serverplugins":["./plugin/plugin.insight"],
+        "less":{
+            "src":"./static/less",
+            "dest":"./static/css",
+            "files":["flex"]
+         }
 }

@@ -1,0 +1,56 @@
+.f-f {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: flex;
+}
+.f-vc {
+    -webkit-box-align:center;
+    -webkit-align-items:center;
+    -moz-box-align:center;
+    -moz-align-items:center;
+    box-align:center;
+    align-items:center;
+}
+.f-hc {
+    -webkit-box-pack:center;
+    -webkit-justify-content:center;
+    -moz-box-pack:center;
+    -moz-justify-content:center;
+    box-pack:center;
+    justify-content:center;
+}
+.f-hr {
+    -webkit-box-pack:end;
+    -webkit-justify-content:flex-end;
+    -moz-box-pack:end;
+    -moz-justify-content:flex-end;
+    box-pack:end;
+    justify-content:flex-end;
+}
+.f-hl {
+    -webkit-box-pack:start;
+    -webkit-justify-content:flex-start;
+    -moz-box-pack:start;
+    -moz-justify-content:flex-start;
+    box-pack:start;
+    justify-content:flex-start;
+}
+
+
+.f-v(@v:1)
+{
+    -webkit-box-flex: @v;
+    -webkit-flex:@v;
+    -moz-box-flex: @v;
+    -moz-flex:@v;
+    flex:@v;
+}
+
+.test-f{
+    .f-v(2);
+}
+
+@import url('sub/common.less');
+@import url('sub/sub.less');

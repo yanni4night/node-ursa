@@ -10,7 +10,8 @@
 	<div class="row">
 		<div class="caption">模板引擎简单变量的输出</div>
 		<div class="content">
-			<var class="imp"><%=name%></var>
+			<var class="imp">
+				<%=name%></var>
 			定义在in _data/test/index.tpl中.你可以点击
 			<a href="/test/index.m">这里</a>
 			修改参数.
@@ -20,13 +21,17 @@
 		<div class="caption">模板引擎对象变量的输出</div>
 		<div class="content">
 			我的电脑有一个
-			<var class="imp"><%=computer.Display %></var>
+			<var class="imp">
+				<%=computer.Display %></var>
 			显示器,一个
-			<var class="imp"><%=computer.CPU %></var>
+			<var class="imp">
+				<%=computer.CPU %></var>
 			的CPU,一部
-			<var class="imp"><%=computer.Keybord %></var>
+			<var class="imp">
+				<%=computer.Keybord %></var>
 			键盘和一个
-			<var class="imp"><%=computer.Disk %></var>
+			<var class="imp">
+				<%=computer.Disk %></var>
 			硬盘.
 		</div>
 	</div>
@@ -38,10 +43,10 @@
 			<ul>
 				<%for (var e in famous){ %>
 				<li>
-					<var class="imp"><%=famous[e]%></var>
+					<var class="imp">
+						<%=famous[e]%></var>
 				</li>
-				<%}%>
-			</ul>
+				<%}%></ul>
 		</div>
 	</div>
 	<div class="row">
@@ -67,17 +72,20 @@
 		<div class="content">
 			<p>
 				_folder=
-				<var class="imp"><%=_folder%></var>
+				<var class="imp">
+					<%=_folder%></var>
 				,代表模板相对于./template路径的第一个目录名，或者就是该文件名（不含后缀）
 			</p>
 			<p>
 				_token=
-				<var class="imp"><%=_token%></var>
+				<var class="imp">
+					<%=_token%></var>
 				,代表该模板的唯一标识，有相对于./template的路径构成，以"_"分隔目录和文件名（不含后缀）
 			</p>
 			<p>
 				_subtoken=
-				<var class="imp"><%=_subtoken%></var>
+				<var class="imp">
+					<%=_subtoken%></var>
 				，代表模板相对于./template路径的第二个目录名，或者为空
 			</p>
 		</div>
@@ -95,7 +103,8 @@
 	<div class="row">
 		<div class="caption">_ursa.json公共数据</div>
 		<div class="content">
-			<var class="imp"><%=project%></var>
+			<var class="imp">
+				<%=project%></var>
 			没有定义在 _data/index.json 中，而是 _data/_ursa.json.点击
 			<a href="/_ursa.m">这里</a>
 			修改数据.
@@ -167,6 +176,16 @@
 	</div>
 	__INSIGHT_PLUGIN__
 	<div class="row">
+		<div class="caption">LESS</div>
+		<div class="content">
+			<span class="less">你可以修改/static/less/sub/sub.less的内容来改版这里的样式。</span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="caption">图片</div>
+		<div class="content"><img src="@static_prefix@/static/img/protocol.png" alt=""></div>
+	</div>
+	<div class="row">
 		<div class="caption">proxy正则匹配</div>
 		<div class="content">
 			<p>
@@ -202,8 +221,7 @@
 			<p>代理仅支持使用UTF-8编码的页面</p>
 		</div>
 	</div>
-<%include ../common/foot.tpl %>
-</body>
+	<%include ../common/foot.tpl %></body>
 	<script type="text/javascript" src="@static_prefix@/static/js/require.min.js"></script>
 	<script type="text/javascript" src="@static_prefix@/static/js/main.js"></script>
 

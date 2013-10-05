@@ -53,5 +53,11 @@
             "/echo/":"http://localhost/php/echo.php"
         },
         /*自定义插件*/
-        "serverplugins":[]
+        "serverplugins":["./plugin/plugin.test"],
+        /*LESS支持*/
+        "less":{
+            "src":"./static/less",/*源目录*/
+            "dest":"./static/css",/*目标目录*/
+            "files":[]/*Less文件相对路径*/
+        }
 }
