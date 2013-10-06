@@ -58,6 +58,6 @@
         "less":{
             "src":"./static/less",/*源目录*/
             "dest":"./static/css",/*目标目录*/
-            "files":[]/*Less文件相对路径*/
+            "files":["less"]/*Less文件相对路径*/
         }
 }
