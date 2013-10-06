@@ -11,10 +11,8 @@ var exec = require('child_process').exec,
   version = pkg.version,
   os = require('os'),
   fs = require('fs'),
-  build,
   sysPath = require('path'),
-  ursa = require('../lib/ursa'),
-  utils = require('../lib/utils');
+  utils=require("../lib/utils");
 
 // CLI
 program
@@ -41,7 +39,7 @@ if (program.init) {
     abort(path + " does not exist");
 
 } else if (program.start) {
-
+  var ursa = require('../lib/ursa');
   var app = ursa.getInstance();
   var port = +program.start;
   app.listen((port > 1024 && port < 65535) ? port : 8899);
@@ -51,7 +49,7 @@ if (program.init) {
   if ('boolean' === typeof program.build || !program.build || program.build.constructor == Boolean)
     program.build = null;
   //按需加载，避免在Initialize时对build产生影响
-  build = require('../lib/build');
+  var build = require('../lib/build');
   return build(program.build, !! program.compress, !! program.html);
 
 } else {
@@ -107,7 +105,7 @@ function createApplicationAt(path) {
     console.log('   run the app:'.verbose);
     console.log('     $ node-ursa --start [port]'.verbose);
     console.log('   build the app:'.verbose);
-    console.log('     $ node-ursa --build [project] [--compress] [--html]'.verbose);
+    console.log('     $ node-ursa --build [environment] [--compress] [--html]'.verbose);
     console.log();
   });
 
