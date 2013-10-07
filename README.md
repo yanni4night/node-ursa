@@ -15,7 +15,7 @@ node-ursa是一个用nodejs开发的、可以模拟服务器环境的前端开�
 
 ##依赖
 
-- Linux & MAC OS X
+ - Linux & MAC OS X
  - Java 1.6+
  - node.js+npm
 
@@ -78,6 +78,8 @@ doc
  - [Manifest.json配置文件详解](https://github.com/yanni4night/node-ursa/wiki/manifest.json%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3)
  - [代码处理工序](https://github.com/yanni4night/node-ursa/wiki/%E4%BB%A3%E7%A0%81%E5%A4%84%E7%90%86%E5%B7%A5%E5%BA%8F)
  - [插件书写规则](https://github.com/yanni4night/node-ursa/wiki/%E6%8F%92%E4%BB%B6%E4%B9%A6%E5%86%99%E8%A7%84%E5%88%99)
+ - [时间戳策略](https://github.com/yanni4night/node-ursa/wiki/%E6%97%B6%E9%97%B4%E6%88%B3%E7%AD%96%E7%95%A5)
+ - [特殊模板变量](https://github.com/yanni4night/node-ursa/wiki/%E7%89%B9%E6%AE%8A%E6%A8%A1%E6%9D%BF%E5%8F%98%E9%87%8F)
 
 changelog
 =========
