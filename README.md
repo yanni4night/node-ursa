@@ -13,6 +13,12 @@ node-ursa是一个用nodejs开发的、可以模拟服务器环境的前端开�
  - 基于YUI的js和css文件压缩；
  - 支持LESS。
 
+##依赖
+
+- Linux & MAC OS X
+ - Java 1.6+
+ - node.js+npm
+
 ##使用方法
 
 ####安装node-ursa
