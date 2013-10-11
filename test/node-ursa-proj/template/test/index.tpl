@@ -167,10 +167,18 @@ __INSIGHT_PLUGIN__
 	<div class="caption">LESS</div>
 	<div class="content"><span class="less">你可以修改/static/less/sub/sub.less的内容来改版这里的样式。</span></div>
 </div>
-	<div class="row">
-		<div class="caption">图片</div>
-		<div class="content"><img src="@static_prefix@/static/img/protocol.png" alt=""></div>
+<div class="row">
+	<div class="caption">@tm:@ 指定文件时间戳</div>
+	<div class="content">
+		#tm:/static/css/main.css#=@tm:/static/css/main.css@	
 	</div>
+</div>
+<div class="row">
+	<div class="caption">图片</div>
+	<div class="content">
+		<img src="@static_prefix@/static/img/protocol.png"/>	
+	</div>
+</div>
 <div class="row">
 	<div class="caption">proxy正则匹配</div>
 	<div class="content">
