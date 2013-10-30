@@ -13,7 +13,7 @@
         "https":0,
         /*模板目录*/
         "template_dir":"./template",
-        /*模板引擎，默认twig，可选twig,ejs,jade*/
+        /*模板引擎，默认twig，可选twig,ejs*/
         "engine":"twig",
         /*控制台日子打印级别,可选为info,warn,error,默认为info*/
         "log_level":"info",
