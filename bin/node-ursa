@@ -7,7 +7,6 @@
 var exec = require('child_process').exec,
   program = require('commander'), //v1.2.0
   pkg = require('../package.json'),
-  execSync = require('exec-sync'),
   version = pkg.version,
   os = require('os'),
   fs = require('fs'),
@@ -110,7 +109,7 @@ function createApplicationAt(path) {
   });
 
   console.log("copying files...".debug);
-  console.log("%s".cmd, execSync("cp -R " + sysPath.join(__dirname, "../clo/*") + " " + path));
+  console.log("%s".cmd, exec("cp -R " + sysPath.join(__dirname, "../clo/*") + " " + path));
 }
 
 /**

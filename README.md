@@ -83,6 +83,7 @@ doc
 
 changelog
 =========
+ - 2013-10-30:使用[async](https://github.com/caolan/async)重建build代码风格，使用内置[yuicompressor](https://github.com/yui/yuicompressor)
  - 2013-10-11:增加@tm:@
  - 2013-10-06:增加LESS预处理
  - 2013-10-02:增加enable_proxy开关和template_dir配置项，不再支持jade引擎，支持插件
@@ -102,10 +103,11 @@ changelog
   - [twig](https://github.com/justjohn/twig.js)
   - [ejs](https://github.com/visionmedia/ejs)
   - [mime](https://github.com/broofa/node-mime)
-  - [exec](sync:https://github.com/jeremyfa/node-exec-sync)
   - [colors](https://github.com/Marak/colors.js)
   - [request](https://github.com/mikeal/request)
   - [less](https://github.com/less/less.js)
+  - [async](https://github.com/caolan/async)
+  - [yuicompressor](https://github.com/yui/yuicompressor)
 
 todo
 =========

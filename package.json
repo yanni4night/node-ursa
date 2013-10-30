@@ -1,6 +1,6 @@
 {
   "name": "node-ursa",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A front end development workbench with server/https/template engine/optimization tools support",
   "main": "./lib/index.js",
   "bin": {
@@ -28,11 +28,12 @@
     "commander": "1.2.0",
     "mkdirp": "0.3.5",
     "mime": "*",
-    "exec-sync": "*",
     "colors": "*",
     "request": "*",
     "less":"*",
     "twig": "*",
-    "ejs": "*"
+    "ejs": "*",
+    "async":"*",
+    "yuicompressor":"*"
   }
 }
