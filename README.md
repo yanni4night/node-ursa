@@ -95,7 +95,7 @@ changelog
  - 2013-09-10:修复了计算时间戳时没有引用生成后静态文件的bug，加入了test工程，加入了生成Tpl模板的支持。
  - 2013-09-09:首次提交，服务器和build基本功能完成，时间戳，压缩合并功能完成。
 
- support
+ dependencies
  =========
   - [node](https://github.com/joyent/node)
   - [commander](https://github.com/visionmedia/commander.js)
@@ -108,6 +108,7 @@ changelog
   - [less](https://github.com/less/less.js)
   - [async](https://github.com/caolan/async)
   - [yuicompressor](https://github.com/yui/yuicompressor)
+  - [uglifyjs](https://github.com/mishoo/UglifyJS2)
 
 todo
 =========

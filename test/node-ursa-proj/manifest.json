@@ -9,7 +9,8 @@
         "js_utf8_escape":1,
         "enable_proxy":1,
         "template_dir":"./template",
-        "github":"https://github.com/yanni4night/node-ursa",
+        "js_compressor":"uglify",/*yui|uglify|require*/
+        "css_compressor":"yui",
         "require_js_modules": ["main","require.min"],
         "require_css_modules": ["main"],
         "require_html_modules": ["test/index"],
@@ -17,8 +18,8 @@
         /*本地文本替换关键字*/
         "num":10,
         "number":"{num}",
-
         "empty_prefix":"",
+        "github":"https://github.com/yanni4night/node-ursa",
         "local":{
             "static_prefix": "/.",
             "img_prefix": "../.."
