@@ -10,7 +10,7 @@ node-ursa是一个用nodejs开发的、可以模拟服务器环境的前端开�
  - 多模板引擎支持，提高HTML开发效率;
  - 模拟服务器数据;
  - 基于require.js的js和css文件合并;
- - 基于YUI的js和css文件压缩；
+ - 多种js和css文件压缩策略；
  - 支持LESS。
 
 ##依赖
@@ -83,13 +83,14 @@ doc
 
 changelog
 =========
- - 2013-10-30:使用[async](https://github.com/caolan/async)重建build代码风格，使用内置[yuicompressor](https://github.com/yui/yuicompressor)
- - 2013-10-11:增加@tm:@
- - 2013-10-06:增加LESS预处理
- - 2013-10-02:增加enable_proxy开关和template_dir配置项，不再支持jade引擎，支持插件
- - 2013-09-20:增加js_utf8_escape选项，用以支持js多字节转义；模板引擎去缓存化配置
- - 2013-09-18:复用模板引擎给[express](https://github.com/visionmedia/express)的接口，支持所有express支持的模板引擎，已适配twig、ejs、jade
- - 2013-09-17:支持三种proxy模式
+ - 2013-11-01:支持r.js工程化处理并增加相关配置选项；移除UglifyJS依赖；改js_utf8_escape为js_ascii_only；r.js updated to 2.1.9。
+ - 2013-10-30:使用[async](https://github.com/caolan/async)重建build代码风格，使用内置[yuicompressor](https://github.com/yui/yuicompressor)。
+ - 2013-10-11:增加@tm:@。
+ - 2013-10-06:增加LESS预处理。
+ - 2013-10-02:增加enable_proxy开关和template_dir配置项，不再支持jade引擎，支持插件。
+ - 2013-09-20:增加js_utf8_escape选项，用以支持js多字节转义；模板引擎去缓存化配置。
+ - 2013-09-18:复用模板引擎给[express](https://github.com/visionmedia/express)的接口，支持所有express支持的模板引擎，已适配twig、ejs、jade。
+ - 2013-09-17:支持三种proxy模式。
  - 2013-09-15:支持HTTPS访问；支持always_add_timestamp选项；优化了build的日志显示和命令行HELP信息，增加server_add_timestamp选项，支持_ursa.json公共数据文件。
  - 2013-09-14:添加了_token/_sutoken/_folder三个内部变量；支持{num}随机参量；规范化测试页面；合并Server和build的公共处理模块。
  - 2013-09-10:修复了计算时间戳时没有引用生成后静态文件的bug，加入了test工程，加入了生成Tpl模板的支持。
@@ -108,9 +109,9 @@ changelog
   - [less](https://github.com/less/less.js)
   - [async](https://github.com/caolan/async)
   - [yuicompressor](https://github.com/yui/yuicompressor)
-  - [uglifyjs](https://github.com/mishoo/UglifyJS2)
+  - [r.js](https://github.com/jrburke/r.js)
 
 todo
 =========
- - velocity support
  - coffeescript support
+ - velocity support

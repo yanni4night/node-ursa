@@ -9,19 +9,27 @@
         "server_add_timestamp":0,
         /*是否开启代理，关闭可提高开发服务器响应速度*/
         "enable_proxy":0,
-        /*HTTP或HTTPS，不能同时*/
+        /*HTTP或HTTPS，不能同时使用HTTPS和HTTP*/
         "https":0,
-        /*模板目录*/
+        /*模板目录，不应放在static中*/
         "template_dir":"./template",
         /*模板引擎，默认twig，可选twig,ejs*/
         "engine":"twig",
         /*控制台日子打印级别,可选为info,warn,error,默认为info*/
         "log_level":"info",
          /*是否转义JS中的多字节字符,仅在build时有效*/
-        "js_utf8_escape":1,
-        /*需要处理的js文件，相对于./static/js，默认不处理任何js*/
+        "js_ascii_only":1,
+        /*JS压缩方式，暂时支持yuicompressor和uglify*/
+        "js_compressor":"yuicompressor",
+        /*是否使用r.js的工程化自动处理，需要配置文件支持；
+            使用r.js处理工程目录使输出目录更简洁，并支持SourceMap；
+        详见http://requirejs.org/docs/optimization.html#wholeproject*/
+        "require_optimize_project":false,
+        /*r.js工程化处理的配置文件名*/
+        "require_config_file":"build.js",
+        /*需要处理的js文件，相对于./static/js，默认仅main.js*/
         "require_js_modules": ["main"],
-        /*需要处理的css文件，相对于./static/css，默认所有css*/
+        /*需要处理的css文件，相对于./static/css，默认仅main.css*/
         "require_css_modules": ["main"],
         /*需要最终生成的 html文件，相对于./template，默认生成所有HTML*/
         "require_html_modules": ["index"],

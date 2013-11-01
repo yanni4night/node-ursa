@@ -34,7 +34,6 @@
     "twig": "*",
     "ejs": "*",
     "async":"*",
-    "yuicompressor":"*",
-    "uglify-js":"2.4.1"
+    "yuicompressor":"*"
   }
 }
