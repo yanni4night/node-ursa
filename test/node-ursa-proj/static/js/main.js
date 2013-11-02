@@ -18,10 +18,10 @@ define('main', ["text!./tpl/list.tpl", "./test/index",'./common/testsuit'], func
 			$("#requirejs-text-content").text(tpl);
 			$("#protocol").text(location.protocol.match(/^https?/i)[0].toUpperCase());
 
-			var iframes=$("iframe"),loadedIframesCnt=0;
-			iframes.on("error load",function(){
+/*			var iframes=$("iframe"),loadedIframesCnt=0;
+			iframes.on("load",function(e){console.log(e);
 				if(iframes.length===++loadedIframesCnt){
-					//all loaded
+*/					//all loaded
 					window.console.clear();
 					testsuit.test(function(msg){
 						$("h1").text("Testing "+msg);
@@ -30,9 +30,9 @@ define('main', ["text!./tpl/list.tpl", "./test/index",'./common/testsuit'], func
 						window.console.log('All Testing done');
 						$("h1").text(total + "个测试项目," + passed + "项成功," + failed + "项失败," + ignored + "项未进行");
 					});
-				}
+/*				}
 			});
-
+*/
 		}
 	};
 });

@@ -42,7 +42,8 @@
             /*完全匹配(包括GET参数与HASH)*/
             "exact:/baidu/":"http://www.baidu.com",
             /*子串匹配*/
-            "bing":"www.bing.com"
+            "bing":"www.bing.com",
+            "ursa":"127.0.0.1/ursa.php"
         },
         "serverplugins":["./plugin/plugin.insight"],
         "less":{
