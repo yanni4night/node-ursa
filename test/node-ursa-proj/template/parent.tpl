@@ -9,7 +9,7 @@
         {% block content %}{% endblock %}
         {%include "common/foot.tpl"%}
     </body>
-    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.10.2/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="//lib.sinaapp.com/js/jquery/1.10.2/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="@static_prefix@/static/js/require.min.js"></script>
     <script type="text/javascript" src="@static_prefix@/static/js/main.js"></script>
     {% block script_module %}{% endblock %}
