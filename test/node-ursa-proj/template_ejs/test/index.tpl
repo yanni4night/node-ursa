@@ -123,8 +123,8 @@
 			<p id="https" style="display:none;">
 				目前处于
 				<span class="imp">HTTPS</span>
-				模式，你可以修改 manifest.json文件中 <em>https</em>
-				的值为0来切换为HTTP模式（重启有效）.
+				模式，你可以修改 manifest.json文件中 <em>protocol</em>
+				的值来使用HTTP、HTTPS或同时使用两种协议（重启有效）.
 			</p>
 			<p id="http" style="display:none;">
 				目前处于

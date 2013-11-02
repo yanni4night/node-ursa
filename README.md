@@ -4,7 +4,7 @@ node-ursa
 node-ursa是一个用nodejs开发的、可以模拟服务器环境的前端开发环境,是[ursa](https://github.com/sogou-ufo/ursa)的js版本。使用node-ursa可以实时调试HTML页面，并能最终生成经过优化的，可用于线上环境的javascript,css和HTML模板文件，从而提高前端开发效率，降低前后端工作的耦合度。
 
 ##主要功能
- - HTTP服务器，提供模拟线上环境的本地开发服务器;
+ - HTTP(S)服务器，提供模拟线上环境的本地开发服务器;
  - 变量替换，特别为开发环境和线上环境提供不同的页面参数;
  - 文件时间戳，避免静态资源文件被缓存造成线上修改无效;
  - 多模板引擎支持，提高HTML开发效率;
@@ -41,19 +41,19 @@ node-ursa是一个用nodejs开发的、可以模拟服务器环境的前端开�
 	
 该命令会向指定目录(未指定则为当前目录)下创建项目的必要文件和目录：
  - manifest.json：工程的唯一配置文件;
- - template：HTML模板目录;
+ - template：HTML模板目录（可指定）;
  - static:包含js，css和img三个子目录，储存静态资源文件;
  - _data:对应HTML模板的数据文件目录。
 
 ####启动开发服务器
 
-	#node-ursa --start [port]
+	#node-ursa --start [httpport/httpsport]
 
 或者
 
-	#node-ursa -s [port]
+	#node-ursa -s [httpport/httpsport]
 
-端口未指定则默认为8899。
+端口未指定则HTTP默认为8899,HTTPS为8443,同时端口也可以在[manifest.json](https://github.com/yanni4night/node-ursa/wiki/manifest.json%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3)中指定。
 
 访问服务器:http://localhost:[port]。通过配置可以支持https形式的访问，但不能同时以HTTP和HTTPS的形式访问。
 
@@ -83,6 +83,7 @@ doc
 
 changelog
 =========
+ - 2013-11-02:支持HTTP与HTTPS同时工作；废弃https选项，代之以protocol；增加http_port和https_port选项。
  - 2013-11-01:支持r.js工程化处理并增加相关配置选项；移除UglifyJS依赖；改js_utf8_escape为js_ascii_only；r.js updated to 2.1.9。
  - 2013-10-30:使用[async](https://github.com/caolan/async)重建build代码风格，使用内置[yuicompressor](https://github.com/yui/yuicompressor)。
  - 2013-10-11:增加@tm:@。

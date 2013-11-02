@@ -1,13 +1,15 @@
 {       
         /*全局配置区*/
-        "always_add_timestamp": 1,
-        "server_add_timestamp":1,
+        "always_add_timestamp": false,
+        "server_add_timestamp":true,
         "timestamp_name":"t",
-        "https":0,
+        "protocol":"both",/*http|https|both*/
+        "http_port":8080,
+        "https_port":8443,
         "engine":"twig",
         "log_level":"info",
-        "js_ascii_only":1,
-        "enable_proxy":1,
+        "js_ascii_only":true,
+        "enable_proxy":true,
         "template_dir":"./template",
         "js_compressor":"yuicompressor",/*yuicompressor|uglify*/
         "css_compressor":"yui",/*not used*/

@@ -9,8 +9,12 @@
         "server_add_timestamp":0,
         /*是否开启代理，关闭可提高开发服务器响应速度*/
         "enable_proxy":0,
-        /*HTTP或HTTPS，不能同时使用HTTPS和HTTP*/
-        "https":0,
+        /*使用的协议，可用的值为http、https或both*/
+        "protocol":"http",
+        /*默认HTTP端口，优先级低于--start的参数*/
+        "http_port":8899,
+        /*默认HTTPS端口，优先级低于--start的参数*/
+        "https_port":8443,
         /*模板目录，不应放在static中*/
         "template_dir":"./template",
         /*模板引擎，默认twig，可选twig,ejs*/

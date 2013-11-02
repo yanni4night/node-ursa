@@ -1,7 +1,13 @@
 #!/usr/bin/env node
 
 /**
- * Module dependencies.
+ * node-ursa
+ *
+ * changelog
+ * 2013/11/02:adapt for https-change cmd parameters
+ *
+ * @author yinyong#sogou-inc.com
+ * @version 0.0.2
  */
 
 var exec = require('child_process').exec,
@@ -40,9 +46,13 @@ if (program.init) {
 } else if (program.start) {
   var ursa = require('../lib/ursa');
   var app = ursa.getInstance();
-  var port = +program.start;
-  app.listen((port > 1024 && port < 65535) ? port : 8899);
 
+  var ports=String.prototype.split.call(program.start,"/");
+
+  var httpPort=+ports[0];
+  var httpsPort=+ports[1];
+
+  app.listen(httpPort,httpsPort);
 } else if (program.build) {
 
   if ('boolean' === typeof program.build || !program.build || program.build.constructor == Boolean)
