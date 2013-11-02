@@ -179,7 +179,7 @@ Node-ursa Test Suit
 	<div class="caption">proxy正则匹配</div>
 	<div class="content">
 		<p>下面iframe的src为/google/，实际通过正则表达式<span class="imp">regex:/google/(.*)</span>代理到指向https://www.google.com.hk</p>
-		<iframe name="iframe-regxp" data-expect="func:validateProxyIframe" width="100%" height="300px" src="/google/"></iframe>
+		<iframe name="iframe-regxp"  width="100%" height="300px" src="/google/"></iframe>
 		<p>代理仅支持使用UTF-8编码的页面</p>
 	</div>
 </div>
@@ -187,7 +187,7 @@ Node-ursa Test Suit
 	<div class="caption">proxy精确匹配</div>
 	<div class="content">
 		<p>下面iframe的src为/baidu/，实际通过精确表达式<span class="imp">exact:/baidu/</span>代理到指向http://www.baidu.com</p>
-		<iframe name="iframe-exact" data-expect="func:validateProxyIframe" width="100%" height="300px" src="/baidu/"></iframe>
+		<iframe name="iframe-exact"  width="100%" height="300px" src="/baidu/"></iframe>
 		<p>代理仅支持使用UTF-8编码的页面</p>
 	</div>
 </div>
@@ -195,7 +195,7 @@ Node-ursa Test Suit
 	<div class="caption">proxy子串匹配</div>
 	<div class="content">
 		<p>下面iframe的src为/test/xxx/aaa/bing，实际通过子串表达式<span class="imp">bing</span>代理到指向http://www.bing.com</p>
-		<iframe name="iframe-match" data-expect="func:validateProxyIframe" width="100%" height="300px" src="/test/xxx/aaa/bing"></iframe>
+		<iframe name="iframe-match"  width="100%" height="300px" src="/test/xxx/aaa/bing"></iframe>
 		<p>代理仅支持使用UTF-8编码的页面</p>
 	</div>
 </div>
