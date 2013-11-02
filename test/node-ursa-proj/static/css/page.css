@@ -15,9 +15,9 @@ a:visited {
 	color: blue;
 }
 .row {
-	border-bottom: 1px solid #dfdfdf;
+	border: 1px solid #dfdfdf;
 	min-width: 900px;
-	width: 100%;
+	margin-bottom: 10px;
 }
 .row .caption {
 	border-bottom: 1px dashed #dfdfdf;
@@ -34,7 +34,7 @@ a:visited {
 	padding: 10px;
 }
 .imp {
-	color: red;
+	color: purple;
 	font-weight: bolder;
 	text-decoration: underline;
 }
@@ -46,4 +46,15 @@ textarea{
 	height: 100px;
 	color: #fff;
 	background: #000 url(@img_prefix@/static/img/p.gif) repeat;
+}
+.hidden{
+	display: none;
+}
+.error{
+	background-color: red;
+}
+.pass{
+	background-color:green; 
+}.none{
+	background-color:grey; 
 }

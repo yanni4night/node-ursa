@@ -1,26 +1,38 @@
-define('main', ["text!./tpl/list.tpl", "./test/index"], function(tpl, test_index) {
+define('main', ["text!./tpl/list.tpl", "./test/index",'./common/testsuit'], function(tpl, test_index,testsuit) {
+	!window.console && (
+		window.console = {
+			log: function() {},
+			debug: function() {},
+			error: function() {},
+			clear:function(){}
+		}
+	);
+
+
 	return {
 		common: function() {
-			window['console'] && (undefined !== tpl) && console.log("文本加载成功:\n[%s]", tpl);
 		},
 		test_index: function() {
 			test_index&&test_index.index && test_index.index();
-			window['console'] && console.log("This is index module");
-			/*向DOM中写文本*/
-			var target = document.getElementById("requirejs-text-content");
-			if (target) {
-				if (undefined !== target.innerText) {
-					target.innerText = tpl;
-				} else {
-					target.textContent = tpl;
-				}
-			};
+			 
+			$("#requirejs-text-content").text(tpl);
+			$("#protocol").text(location.protocol.match(/^https?/i)[0].toUpperCase());
 
-			if (location.protocol == 'https:') {
-				document.getElementById("https").style.display = 'block';
-			} else {
-				document.getElementById("http").style.display = 'block';
-			}
+			var iframes=$("iframe"),loadedIframesCnt=0;
+			iframes.on("error load",function(){
+				if(iframes.length===++loadedIframesCnt){
+					//all loaded
+					window.console.clear();
+					testsuit.test(function(msg){
+						$("h1").text("Testing "+msg);
+						window.console.log("Testing "+msg);
+					},function(total, passed, failed, ignored) {
+						window.console.log('All Testing done');
+						$("h1").text(total + "个测试项目," + passed + "项成功," + failed + "项失败," + ignored + "项未进行");
+					});
+				}
+			});
+
 		}
 	};
 });

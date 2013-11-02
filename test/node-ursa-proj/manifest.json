@@ -38,7 +38,7 @@
         /*代理只支持UTF-8*/
         "proxy":{
             /*正则匹配*/
-            "regex:/dgtle/(.*)":"http://www.dgtle.com/$1",
+            "regex:/google/(.*)":"https://www.google.com.hk/$1",
             /*完全匹配(包括GET参数与HASH)*/
             "exact:/baidu/":"http://www.baidu.com",
             /*子串匹配*/
