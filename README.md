@@ -97,9 +97,16 @@ changelog
  - 2013-09-10:修复了计算时间戳时没有引用生成后静态文件的bug，加入了test工程，加入了生成Tpl模板的支持。
  - 2013-09-09:首次提交，服务器和build基本功能完成，时间戳，压缩合并功能完成。
 
+
+test
+=========
+  #cd test/node-ursa-proj
+  #sh start.sh
+
  dependencies
  =========
   - [node](https://github.com/joyent/node)
+  - [connect](https://github.com/senchalabs/connect)
   - [commander](https://github.com/visionmedia/commander.js)
   - [mkdirp](https://github.com/substack/node-mkdirp)
   - [twig](https://github.com/justjohn/twig.js)
@@ -111,6 +118,11 @@ changelog
   - [async](https://github.com/caolan/async)
   - [yuicompressor](https://github.com/yui/yuicompressor)
   - [r.js](https://github.com/jrburke/r.js)
+
+notice
+=========
+
+[twig](https://github.com/justjohn/twig.js) may throw exceptions which should not if syntax failed.
 
 todo
 =========

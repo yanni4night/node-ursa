@@ -27,14 +27,14 @@
   "dependencies": {
     "commander": "1.2.0",
     "mkdirp": "0.3.5",
-    "mime": "*",
-    "colors": "*",
-    "request": "*",
-    "less":"*",
-    "twig": "*",
-    "ejs": "*",
-    "async":"*",
-    "yuicompressor":"*",
+    "mime": "1.2.11",
+    "colors": "0.6.2",
+    "request": "2.27.0",
+    "less":"1.5.0",
+    "twig": "0.5.12",
+    "ejs": "0.8.4",
+    "async":"0.2.9",
+    "yuicompressor":"2.4.8",
     "connect":"2.11.0"
   }
 }
