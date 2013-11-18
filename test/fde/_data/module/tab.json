@@ -1,0 +1,17 @@
+{
+    "tabs":[
+    {
+        "name":"Bing",
+        "url":"http://www.bing.com"
+    }  ,  {
+        "name":"Google",
+        "url":"http://www.google.com.hk"
+    }  , {
+        "name":"Baidu",
+        "url":"http://www.baidu.com"
+    } , {
+        "name":"Sogou",
+        "url":"http://www.sogou.com"
+    }
+    ]
+}

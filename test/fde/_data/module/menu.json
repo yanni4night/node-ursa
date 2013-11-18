@@ -1,8 +1,8 @@
 {
     "common_menu_items":[
-        {"id":"menu_index","text":"首页","link":"/"},
-        {"id":"menu_login","text":"登录","link":"/login"},
-        {"id":"menu_logout","text":"登出","link":"/logout"},
-        {"id":"menu_about","text":"关于","link":"/about"}
+        {"id":"menu_list","text":"列表","link":"/"},
+        {"id":"menu_index","text":"首页","link":"/page/index.ut"},
+        {"id":"menu_login","text":"登录","link":"/page/login.ut"},
+        {"id":"menu_about","text":"关于","link":"/page/about.ut"}
     ]
 }

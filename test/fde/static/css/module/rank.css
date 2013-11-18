@@ -1,0 +1,18 @@
+/**
+  * rank.css
+  *
+  * changelog
+  * 2013-11-18[21:05:59]:created
+  *
+  * @info yinyong,osx-x64,Undefined,10.129.173.11,css,/Users/yinyong/work/node-ursa/test/fde/static/css/module
+  * @author yanni4night@gmail.com
+  * @version 0.0.1
+  * @since 0.0.1
+  */
+.rank{width: 200px;border:1px solid #28b;}
+.rank .caption{width: 100%;height: 35px;line-height: 35px;font-size: 18px;color: red;font-weight: bold;border-bottom: 1px solid #28b;text-align: center;}
+.rank .list{width: 100%;}
+.rank .list ul{list-style: none;display: block;width: 100%;padding: 0;margin: 0;}
+.rank .list ul li{width: 100%;display: block;padding: 10px 0;line-height: 20px;height: 20px;font-size: 14px;border-bottom: 1px dashed #26a;text-align: center;}
+.rank .list ul li:last-child{border-bottom: none;}
+.rank .list ul li:hover{background: #28b;}

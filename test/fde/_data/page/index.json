@@ -1,0 +1,18 @@
+{
+    "index_rank":{
+        "caption":"INDEX",
+        "list":["斯大林","内塔尼亚胡","林肯"]
+    },
+        "index_tabs":[
+    {
+        "name":"Sina",
+        "url":"http://www.sina.com.cn"
+    }  , {
+        "name":"Sohu",
+        "url":"http://www.sohu.com"
+    } , {
+        "name":"QQ",
+        "url":"http://www.qq.com"
+    }
+    ]
+}

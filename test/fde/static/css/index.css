@@ -1,1 +1,19 @@
+/**
+  * index.css
+  *
+  * changelog
+  * 2013-11-18[19:15:52]:created
+  *
+  * @info yinyong,osx-x64,UTF-8,10.129.173.11,css,/Users/yinyong/work/node-ursa/test/fde/static/css
+  * @author yanni4night@gmail.com
+  * @version 0.0.1
+  * @since 0.0.1
+  */
 @import url(module/menu.css);
+@import url(module/rank.css);
+@import url(module/index/gallery.css);
+
+html,body{
+  padding: 0;
+  margin: 0;
+}
