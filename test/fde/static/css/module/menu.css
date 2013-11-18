@@ -1,0 +1,5 @@
+nav.menu{width: 100%;height: 25px;font-size: 20px;line-height: 20px;}
+nav.menu ul{list-style: none;width: 100%;display: block;height: 100%;width: 100%;}
+nav.menu ul li{float: left;height: 100%;padding: 0 10px;}
+nav.menu ul li a{color: #28b;}
+nav.menu ul li:hover{background: #eee}

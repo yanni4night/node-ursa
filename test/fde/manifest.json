@@ -1,0 +1,53 @@
+{       
+        /*全局配置区*/
+        "always_add_timestamp": false,
+        "server_add_timestamp":true,
+        "timestamp_name":"t",
+        "protocol":"http",/*http|https|both*/
+        "http_port":8080,
+        "https_port":8443,
+        "engine":"twig",
+        "log_level":"info",
+        "js_ascii_only":true,
+        "enable_proxy":true,
+        "template_dir":"./template",
+        "js_compressor":"yuicompressor",/*yuicompressor|uglify*/
+        "css_compressor":"yui",/*not used*/
+        "require_js_modules": ["main"],
+        "require_css_modules": ["main"],
+
+        /*r.js项目优化选项*/
+        "require_optimize_project":true,
+        "require_config_file":"app-build.js",
+
+        /*本地文本替换关键字*/
+        "num":10,
+        "number":"{num}",
+        "empty_prefix":"",
+        "github":"https://github.com/yanni4night/node-ursa",
+        "local":{
+            "static_prefix": "/.",
+            "img_prefix": "../.."
+            },
+        /*发布文本替换关键字*/
+        "online": {
+            "static_prefix": ".",
+            "img_prefix": "../.."
+        },
+        /*代理只支持UTF-8*/
+        "proxy":{
+            /*正则匹配*/
+            "regex:/google/(.*)":"https://www.google.com.hk/$1",
+            /*完全匹配(包括GET参数与HASH)*/
+            "exact:/baidu/":"http://www.baidu.com",
+            /*子串匹配*/
+            "bing":"www.bing.com",
+            "ursa":"127.0.0.1/ursa.php"
+        }/*,*/
+       /* "serverplugins":["./plugin/plugin.insight"],*/
+        /*"less":{
+            "src":"./static/less",
+            "dest":"./static/css",
+            "files":["flex"]
+         }*/
+}
