@@ -9,10 +9,13 @@
 <style type="text/css"></style>
 </head>
 <body>
+    <p>这里是parent引用的menu模块数据</p>
     {% include "_common/menu.tpl" %}
     {% block content %}
 
     {%endblock%}
+    <p>这里是parent引用的footer模块数据</p>
+    {% include "_common/footer.tpl" %}
 </body>
 <script>
  require.config({
