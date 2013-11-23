@@ -11,7 +11,7 @@
 {%for css in required_css%}
 <link rel="stylesheet" href="/static/css/{{css}}">
 {%endfor%}
-<link rel="stylesheet" href="/static/css/{{name}}.css">
+<link rel="stylesheet" href="/static/css{{name}}.css">
 </head>
 <body>
     {{content}}

@@ -13,6 +13,9 @@
         "template_dir":"./template",
         "js_compressor":"yuicompressor",/*yuicompressor|uglify*/
         "css_compressor":"yui",/*not used*/
+        "common_dir":"_common",/*相对于template_dir*/
+        "module_dir":"_module",/*相对于template_dir*/
+
         "require_js_modules": ["main"],
         "require_css_modules": ["main"],
 
