@@ -15,12 +15,13 @@
         self.$container=$(ele);
         var settings=self.settings={
             $captionItem:self.$container.find('.caption .item'),
-            $contentItem:self.$container.find('.content .item')
+            $contentItem:self.$container.find('.content .item'),
+            selectedItemClass:"on"
         };
 
         $.extend(settings,options);
 
-        for(var i=0;len=self.settings.$captionItem.length;i<len;++i){
+        for(var i=0,len=self.settings.$captionItem.length;i<len;++i){
             self.settings.$captionItem.eq(i).attr('data-index',i);
         }
 
@@ -28,6 +29,9 @@
                 var index=$(this).attr('data-index')|0;
                    self.settings.$contentItem.hide();
                    self.settings.$contentItem.eq(index).show();
+                   e.preventDefault();
+                   self.settings.$captionItem.removeClass(settings.selectedItemClass);
+                   $(this).addClass(settings.selectedItemClass);
         });
     }
 

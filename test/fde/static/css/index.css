@@ -11,6 +11,7 @@
   */
 @import url(module/menu.css);
 @import url(module/rank.css);
+@import url(module/tab.css);
 @import url(module/index/gallery.css);
 
 html,body{

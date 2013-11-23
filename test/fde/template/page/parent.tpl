@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8"/>
-<title>Auto Insert</title>
+<title>{%block title%}FDE{%endblock%}</title>
 <script type="application/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 <script type="application/javascript" src="http://p0.123.sogou.com/u/js/ursa.js"></script>
 <link rel="stylesheet" href="/static/css/index.css"/>
@@ -18,7 +18,7 @@
  require.config({
         baseUrl:"/static/js"
     });
-    require(["index"],function(index){
+    require(["{{_token}}"],function(index){
         index.init();
     });
 </script>

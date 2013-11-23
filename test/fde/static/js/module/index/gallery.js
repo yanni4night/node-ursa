@@ -27,14 +27,14 @@ define([],function() {
 
     self.left=function(){
       if(++self.index>self.cnt-1){self.index=0;}
-        self.settings.$container.css('left',(-self.settings.width*self.index)+"px");
+        self.settings.$container.animate({'left':(-self.settings.width*self.index)+"px"});
     };
 
     self.right=function(){
       if(--self.index<0){
         self.index=self.cnt-1;
       }
-        self.settings.$container.css('left',(-self.settings.width*self.index)+"px");
+        self.settings.$container.animate({'left':(-self.settings.width*self.index)+"px"});
     };
 
 
