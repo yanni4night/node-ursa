@@ -1,0 +1,14 @@
+/**
+  * content.css
+  *
+  * changelog
+  * 2013-11-23[20:29:56]:created
+  *
+  * @info yinyong,osx-x64,Undefined,10.129.173.11,css,/Users/yinyong/work/node-ursa/test/fde/static/css/_module/index
+  * @author yinyong#sogou-inc.com
+  * @version 0.0.1
+  * @since 0.0.1
+  */
+@import url(../../_common/rank.css);
+@import url(../../_common/tab.css);
+@import url(../../_module/index/gallery.css);

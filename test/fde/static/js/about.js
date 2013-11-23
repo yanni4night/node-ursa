@@ -9,7 +9,7 @@
   * @version 0.0.1
   * @since 0.0.1
   */
-define(['module/tab'],function () {
+define(['_common/tab'],function () {
     return {
         init:function(){
             $('.tab').tab();

@@ -10,11 +10,10 @@
   * @since 0.0.1
   */
 
-define(['module/index/gallery','module/tab'],function(gallery) {
+define(['_module/index/content'],function(content) {
     return {
       init:function(){
-        gallery.init();
-        $('.tab').tab();
+        content.init();
       }
     };
 });

@@ -1,4 +1,4 @@
-{% extends "page/parent.tpl" %}
+{% extends "parent.tpl" %}
 
 {% block content %}
 <form action="index.ut" method="post">

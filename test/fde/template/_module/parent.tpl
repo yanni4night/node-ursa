@@ -8,6 +8,9 @@
 <style>
     html,body{padding: 0;margin: 0;}
 </style>
+{%for css in required_css%}
+<link rel="stylesheet" href="/static/css/{{css}}">
+{%endfor%}
 <link rel="stylesheet" href="/static/css/{{name}}.css">
 </head>
 <body>

@@ -9,10 +9,10 @@
   * @version 0.0.1
   * @since 0.0.1
   */
-.gallery-wrapper{width: 100%;height: 320px;border:1px solid #28b;position: relative;overflow: hidden;}
-.gallery-wrapper .gallery-slider{width: 1000%;position: relative;height: 320px;}
+.gallery-wrapper{height: 320px;border:1px solid #28b;overflow: hidden;}
+.gallery-wrapper .gallery-slider{width: 1000%;height: 320px;}
 .gallery-wrapper .gallery-slider img {float: left;height: 320px;width: 800px;}
-.gallery-wrapper .direc{position: absolute;width: 50px;height: 100%;text-align: center;line-height: 320px;top: 0;z-index: 1000;}
+.gallery-wrapper .direc{width: 50px;text-align: center;line-height: 320px;top: 0;z-index: 1000;}
 .gallery-wrapper .direc:hover{background: rgba(0,0,0,0.5);}
 .gallery-wrapper .left{left: 0;}
 .gallery-wrapper .right{right: 0;}

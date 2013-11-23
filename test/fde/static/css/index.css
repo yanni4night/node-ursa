@@ -9,10 +9,10 @@
   * @version 0.0.1
   * @since 0.0.1
   */
-@import url(module/menu.css);
-@import url(module/rank.css);
-@import url(module/tab.css);
-@import url(module/index/gallery.css);
+ @import url(_module/index/base.css);
+@import url(_common/menu.css);
+@import url(_module/index/content.css);
+
 
 html,body{
   padding: 0;
