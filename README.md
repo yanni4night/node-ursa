@@ -1,3 +1,9 @@
+Notice
+=========
+
+This repo is *deprecated*.See [ursa2](https://github.com/yanni4night/ursa2) ,which is another version rewritten by Python.
+
+
 node-ursa
 =========
 
